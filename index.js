@@ -1,9 +1,11 @@
 // hero variables
-const heroElementId = "hero"
-const heroName = "Wizard"
-const heroAvatar = "images/wizard.png"
-const heroHealth = "60"
-const heroDiceRoll = 6
+const hero = {
+    heroElementId: "hero",
+    heroName: "Wizard",
+    heroAvatar: "images/wizard.png",
+    heroHealth: "60",
+    heroDiceRoll: 6
+}
 
 // monster variables
 const monsterElementId = "monster"
