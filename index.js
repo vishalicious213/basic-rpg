@@ -1,19 +1,19 @@
-// hero variables
+// hero object
 const hero = {
-    heroElementId: "hero",
-    heroName: "Wizard",
-    heroAvatar: "images/wizard.png",
-    heroHealth: "60",
-    heroDiceRoll: 6
+    elementId: "hero",
+    name: "Wizard",
+    avatar: "images/wizard.png",
+    health: "60",
+    diceRoll: 6
 }
 
-// monster variables
+// monster object
 const monster = {
-    monsterElementId: "monster",
-    monsterName: "Orc",
-    monsterAvatar: "images/orc.png",
-    monsterHealth: "10",
-    monsterDiceRoll: 4
+    elementId: "monster",
+    name: "Orc",
+    avatar: "images/orc.png",
+    health: "10",
+    diceRoll: 4
 }
 
 // render hero or monster characters
