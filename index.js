@@ -1,3 +1,10 @@
+// hero variables
+const heroElementId = "hero"
+const heroNAme = "Wizard"
+const heroAvatar = "images/wizard.png"
+const heroHealth = "60"
+const heroDiceRoll = 6
+
 // render wizard in hero div
 document.getElementById("hero").innerHTML = `
     <div class="character-card">
