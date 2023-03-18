@@ -8,11 +8,13 @@ const hero = {
 }
 
 // monster variables
-const monsterElementId = "monster"
-const monsterName = "Orc"
-const monsterAvatar = "images/orc.png"
-const monsterHealth = "10"
-const monsterDiceRoll = 4
+const monster = {
+    monsterElementId: "monster",
+    monsterName: "Orc",
+    monsterAvatar: "images/orc.png",
+    monsterHealth: "10",
+    monsterDiceRoll: 4
+}
 
 // render hero or monster characters
 function renderCharacter(elementID, name, avatar, health, diceRoll) {
