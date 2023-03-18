@@ -18,12 +18,13 @@ const monster = {
 
 // render hero or monster characters
 function renderCharacter(char) {
-    document.getElementById(char.elementId).innerHTML = `
+    const { elementId, name, avatar, health, diceRoll } = char
+    document.getElementById(elementId).innerHTML = `
         <div class="character-card">
-            <h4 class="name"> ${char.name} </h4>
-            <img class="avatar" src="${char.avatar}"/>
-            <p class="health">health: <b> ${char.health} </b></p>
-            <div class="dice-container"><div class="dice"> ${char.diceRoll} </div></div>
+            <h4 class="name"> ${name} </h4>
+            <img class="avatar" src="${avatar}"/>
+            <p class="health">health: <b> ${health} </b></p>
+            <div class="dice-container"><div class="dice"> ${diceRoll} </div></div>
         </div>
     `
 }
