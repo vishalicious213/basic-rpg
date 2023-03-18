@@ -7,7 +7,7 @@ const heroDiceRoll = 6
 
 // monster variables
 const monsterElementId = "monster"
-const monsterNAme = "Orc"
+const monsterName = "Orc"
 const monsterAvatar = "images/orc.png"
 const monsterHealth = "10"
 const monsterDiceRoll = 4
@@ -25,3 +25,4 @@ function renderCharacter(elementID, name, avatar, health, diceRoll) {
 }
 
 renderCharacter(heroElementId, heroName, heroAvatar, heroHealth, heroDiceRoll)
+renderCharacter(monsterElementId, monsterName, monsterAvatar, monsterHealth, monsterDiceRoll)
