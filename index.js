@@ -1,6 +1,6 @@
 // hero variables
 const heroElementId = "hero"
-const heroNAme = "Wizard"
+const heroName = "Wizard"
 const heroAvatar = "images/wizard.png"
 const heroHealth = "60"
 const heroDiceRoll = 6
@@ -23,3 +23,5 @@ function renderCharacter(elementID, name, avatar, health, diceRoll) {
         </div>
     `
 }
+
+renderCharacter(heroElementId, heroName, heroAvatar, heroHealth, heroDiceRoll)
