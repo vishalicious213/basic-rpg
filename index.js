@@ -5,6 +5,13 @@ const heroAvatar = "images/wizard.png"
 const heroHealth = "60"
 const heroDiceRoll = 6
 
+// monster variables
+const monsterElementId = "monster"
+const monsterNAme = "Orc"
+const monsterAvatar = "images/orc.png"
+const monsterHealth = "10"
+const monsterDiceRoll = 4
+
 // render wizard in hero div
 document.getElementById("hero").innerHTML = `
     <div class="character-card">
