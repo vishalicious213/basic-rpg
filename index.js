@@ -18,7 +18,7 @@ const monster = {
 
 // render hero or monster characters
 function renderCharacter(char) {
-    document.getElementById(char.elementID).innerHTML = `
+    document.getElementById(char.elementId).innerHTML = `
         <div class="character-card">
             <h4 class="name"> ${char.name} </h4>
             <img class="avatar" src="${char.avatar}"/>
@@ -28,5 +28,5 @@ function renderCharacter(char) {
     `
 }
 
-renderCharacter(heroElementId, heroName, heroAvatar, heroHealth, heroDiceRoll)
-renderCharacter(monsterElementId, monsterName, monsterAvatar, monsterHealth, monsterDiceRoll)
+renderCharacter(hero)
+renderCharacter(monster)
