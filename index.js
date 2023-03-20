@@ -4,7 +4,8 @@ const hero = {
     name: "Wizard",
     avatar: "images/wizard.png",
     health: "60",
-    diceRoll: 6
+    diceRoll: 6,
+    diceCount: 3
 }
 
 // monster object
@@ -13,7 +14,8 @@ const monster = {
     name: "Orc",
     avatar: "images/orc.png",
     health: "10",
-    diceRoll: 4
+    diceRoll: 4,
+    diceCount: 1
 }
 
 // render hero or monster characters
