@@ -11,6 +11,8 @@ This RPG is the focus of Module 7 from Scrimba's Frontend Developer Path, "Next-
     - .fill()
 - Chaining methods together
 - Constructor functions
+    - 'this' keyword
+    - methods on constructor functions
 - Returning a function inside a function
 - Object.assign
 - Importing and exporting
