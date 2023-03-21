@@ -5,4 +5,11 @@ function getDiceRollArray(diceCount) {
     })
 }
 
-export { getDiceRollArray }
+// start game with blank dice until they're rolled
+function getDicePlaceholderHtml(diceCount) {
+    return new Array(diceCount).map(function() {
+        return `<div class="placeholder-dice"></div>`
+    }).join("")
+}
+
+export { getDiceRollArray, getDicePlaceholderHtml }
