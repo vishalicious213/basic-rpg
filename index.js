@@ -1,21 +1,4 @@
-const characterData = {
-    // hero object
-    hero: {
-        elementId: "hero",
-        name: "Wizard",
-        avatar: "images/wizard.png",
-        health: "60",
-        diceCount: 3
-    },
-    // monster object
-    monster: {
-        elementId: "monster",
-        name: "Orc",
-        avatar: "images/orc.png",
-        health: "10",
-        diceCount: 1
-    }
-}
+import characterData from "./data.js"
 
 // generate random dice rolls
 function getDiceRollArray(diceCount) {
