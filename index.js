@@ -18,6 +18,15 @@ const monster = {
     diceCount: 1
 }
 
+// generate random dice rolls
+function getDiceRollArray(diceCount) {
+    let diceRolls = []
+    for (i = 0; i < diceCount; i++) {
+        diceRolls.push(Math.floor((Math.random() * 6) + 1))
+    }
+    return diceRolls
+}
+
 // render hero or monster characters
 function renderCharacter(char) {
     const { elementId, name, avatar, health, diceRoll, diceCount } = char
@@ -38,3 +47,4 @@ function renderCharacter(char) {
 
 renderCharacter(hero)
 renderCharacter(monster)
+console.log(getDiceRollArray(3))
