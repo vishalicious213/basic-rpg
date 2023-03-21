@@ -30,6 +30,15 @@ function getDiceHtml(diceCount) {
     }).join("")
 }
 
+// character constructor function
+function Character(data) {
+    this.elementId = data.elementId
+    this.name = data.name
+    this.avatar = data.avatar
+    this.health = data.health
+    this.diceCount = data.diceCount
+}
+
 // render hero or monster characters
 function renderCharacter(char) {
     const { elementId, name, avatar, health, diceCount } = char
