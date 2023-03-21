@@ -13,8 +13,8 @@ function Character(data) {
         }).join("")
     }
 
-    this.takeDamage = function() {
-        console.log(`${this.name} is damaged`)
+    this.takeDamage = function(attackScoreArray) {
+        console.log(`${this.name} is damaged by ${attackScoreArray}`)
     }
 
     this.getCharacterHtml = function() {
