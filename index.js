@@ -37,23 +37,41 @@ function Character(data) {
     this.avatar = data.avatar
     this.health = data.health
     this.diceCount = data.diceCount
+    this.getCharacterHtml = function() {
+        const diceHtml = getDiceHtml(data.diceCount)
+
+        document.getElementById(this.elementId).innerHTML = `
+            <div class="character-card">
+                <h4 class="name"> ${this.name} </h4>
+                <img class="avatar" src="${this.avatar}"/>
+                <p class="health">health: <b> ${this.health} </b></p>
+                <div class="dice-container"> ${diceHtml} </div>
+            </div>
+        `
+    }
 }
+
+const wizard = new Character(hero)
+const orc = new Character(monster)
+
+wizard.getCharacterHtml()
+orc.getCharacterHtml()
 
 // render hero or monster characters
-function renderCharacter(char) {
-    const { elementId, name, avatar, health, diceCount } = char
+// function renderCharacter(char) {
+//     const { elementId, name, avatar, health, diceCount } = char
 
-    const diceHtml = getDiceHtml(diceCount)
+//     const diceHtml = getDiceHtml(diceCount)
 
-    document.getElementById(elementId).innerHTML = `
-        <div class="character-card">
-            <h4 class="name"> ${name} </h4>
-            <img class="avatar" src="${avatar}"/>
-            <p class="health">health: <b> ${health} </b></p>
-            <div class="dice-container"> ${diceHtml} </div>
-        </div>
-    `
-}
+//     document.getElementById(elementId).innerHTML = `
+//         <div class="character-card">
+//             <h4 class="name"> ${name} </h4>
+//             <img class="avatar" src="${avatar}"/>
+//             <p class="health">health: <b> ${health} </b></p>
+//             <div class="dice-container"> ${diceHtml} </div>
+//         </div>
+//     `
+// }
 
-renderCharacter(hero)
-renderCharacter(monster)
+// renderCharacter(hero)
+// renderCharacter(monster)
