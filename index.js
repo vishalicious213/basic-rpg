@@ -1,11 +1,5 @@
 import characterData from "./data.js"
-
-// generate random dice rolls
-function getDiceRollArray(diceCount) {
-    return new Array(diceCount).fill(0).map(function() {
-        return Math.floor((Math.random() * 6) + 1)
-    })
-}
+import { getDiceRollArray } from "./utils.js"
 
 // character constructor function
 function Character(data) {
