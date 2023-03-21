@@ -18,12 +18,9 @@ const monster = {
 
 // generate random dice rolls
 function getDiceRollArray(diceCount) {
-    return new Array(diceCount).fill(0)
-    // let diceRolls = []
-    // for (i = 0; i < diceCount; i++) {
-    //     diceRolls.push(Math.floor((Math.random() * 6) + 1))
-    // }
-    // return diceRolls
+    return new Array(diceCount).fill(0).map(function() {
+        return Math.floor((Math.random() * 6) + 1)
+    })
 }
 
 // generate dice html from random rolls
