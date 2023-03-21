@@ -23,13 +23,6 @@ function getDiceRollArray(diceCount) {
     })
 }
 
-// generate dice html from random rolls
-// function getDiceHtml(diceCount) {
-//     return getDiceRollArray(diceCount).map(function(die) {
-//         return `<div class="dice">${die}</div>`
-//     }).join("")
-// }
-
 // character constructor function
 function Character(data) {
     Object.assign(this, data)
