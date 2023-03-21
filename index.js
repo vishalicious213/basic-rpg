@@ -24,11 +24,11 @@ function getDiceRollArray(diceCount) {
 }
 
 // generate dice html from random rolls
-function getDiceHtml(diceCount) {
-    return getDiceRollArray(diceCount).map(function(die) {
-        return `<div class="dice">${die}</div>`
-    }).join("")
-}
+// function getDiceHtml(diceCount) {
+//     return getDiceRollArray(diceCount).map(function(die) {
+//         return `<div class="dice">${die}</div>`
+//     }).join("")
+// }
 
 // character constructor function
 function Character(data) {
@@ -36,7 +36,7 @@ function Character(data) {
 
     this.getCharacterHtml = function() {
         const { elementId, name, avatar, health, diceCount } = this
-        const diceHtml = getDiceHtml(diceCount)
+        const diceHtml = this.getDiceHtml(diceCount)
         document.getElementById(elementId).innerHTML = `
             <div class="character-card">
                 <h4 class="name"> ${name} </h4>
@@ -45,6 +45,12 @@ function Character(data) {
                 <div class="dice-container"> ${diceHtml} </div>
             </div>
         `
+    }
+
+    this.getDiceHtml = function(diceCount) {
+        return getDiceRollArray(diceCount).map(function(die) {
+            return `<div class="dice">${die}</div>`
+        }).join("")
     }
 }
 
