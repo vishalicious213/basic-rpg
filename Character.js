@@ -13,6 +13,10 @@ function Character(data) {
         }).join("")
     }
 
+    this.takeDamage = function() {
+        console.log(`${this.name} is damaged`)
+    }
+
     this.getCharacterHtml = function() {
         const { name, avatar, health, diceArray } = this
         return `
