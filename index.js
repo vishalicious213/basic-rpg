@@ -27,6 +27,12 @@ function getDiceRollArray(diceCount) {
     return diceRolls
 }
 
+function getDiceHtml() {
+    return getDiceRollArray.map(function(die) {
+        return `<div class="dice">${die}</div>`
+    }).join("")
+}
+
 // render hero or monster characters
 function renderCharacter(char) {
     const { elementId, name, avatar, health, diceRoll, diceCount } = char
