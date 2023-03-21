@@ -4,9 +4,14 @@ This RPG is the focus of Module 7 from Scrimba's Frontend Developer Path, "Next-
 
 - Destructuring objects
 - Mapping over arrays
+    - .map()
+    - .join()
 - The Array constructor
+    - new Array()
+    - .fill()
 - Chaining methods together
 - Constructor functions
+- Returning a function inside a function
 - Object.assign
 - Importing and exporting
 - The .reduce() method
