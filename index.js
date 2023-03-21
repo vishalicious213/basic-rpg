@@ -7,7 +7,7 @@ const orc = new Character(characterData.monster)
 document.getElementById("attack-button").addEventListener("click", attack)
 
 function attack() {
-    console.log("Attack!")
+    render()
 }
 
 function render() {
