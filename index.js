@@ -56,22 +56,3 @@ const orc = new Character(monster)
 
 wizard.getCharacterHtml()
 orc.getCharacterHtml()
-
-// render hero or monster characters
-// function renderCharacter(char) {
-//     const { elementId, name, avatar, health, diceCount } = char
-
-//     const diceHtml = getDiceHtml(diceCount)
-
-//     document.getElementById(elementId).innerHTML = `
-//         <div class="character-card">
-//             <h4 class="name"> ${name} </h4>
-//             <img class="avatar" src="${avatar}"/>
-//             <p class="health">health: <b> ${health} </b></p>
-//             <div class="dice-container"> ${diceHtml} </div>
-//         </div>
-//     `
-// }
-
-// renderCharacter(hero)
-// renderCharacter(monster)
