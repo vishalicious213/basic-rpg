@@ -7,7 +7,7 @@ function getDiceRollArray(diceCount) {
 
 // start game with blank dice until they're rolled
 function getDicePlaceholderHtml(diceCount) {
-    return new Array(diceCount).map(function() {
+    return new Array(diceCount).fill(0).map(function() {
         return `<div class="placeholder-dice"></div>`
     }).join("")
 }
