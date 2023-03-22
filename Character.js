@@ -18,8 +18,11 @@ function Character(data) {
             return total + damage
         })
 
+        // console.log(`${this.name} is damaged by ${totalAttackScore}`)
         this.health -= totalAttackScore
-        console.log(`${this.name} is damaged by ${totalAttackScore}`)
+        if (this.health < 0) {
+            this.health = 0
+        }
     }
 
     this.getCharacterHtml = function() {
