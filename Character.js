@@ -17,6 +17,8 @@ function Character(data) {
         const totalAttackScore = attackScoreArray.reduce(function(total, damage) {
             return total + damage
         })
+
+        this.health -= totalAttackScore
         console.log(`${this.name} is damaged by ${totalAttackScore}`)
     }
 
