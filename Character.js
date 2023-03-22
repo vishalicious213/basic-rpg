@@ -20,7 +20,7 @@ function Character(data) {
 
         // console.log(`${this.name} is damaged by ${totalAttackScore}`)
         this.health -= totalAttackScore
-        if (this.health < 0) {
+        if (this.health <= 0) {
             this.dead = true
             this.health = 0
         }

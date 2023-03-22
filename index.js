@@ -14,6 +14,10 @@ function attack() {
     render()
 }
 
+function endGame() {
+    console.log("The game is over.")
+}
+
 function render() {
     document.getElementById("hero").innerHTML = wizard.getCharacterHtml()
     document.getElementById("monster").innerHTML = orc.getCharacterHtml()
