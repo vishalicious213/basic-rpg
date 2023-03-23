@@ -19,7 +19,11 @@ function attack() {
 }
 
 function endGame() {
-    console.log("The game is over.")
+    const endMessage =
+        wizard.dead && orc.dead ? "No victors - all creatures are dead."
+        : wizard.dead ? "The orc is victorious."
+        : "The wizard wins!"
+    console.log(endMessage)
 }
 
 function render() {
