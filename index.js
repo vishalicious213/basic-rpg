@@ -28,7 +28,13 @@ function endGame() {
         wizard.dead && orc.dead ? "No victors - all creatures are dead."
         : wizard.dead ? "The orc is victorious."
         : "The wizard wins!"
-    console.log(endMessage)
+
+    document.body.innerHTML = 
+        `<div class="end-game">
+            <h2>Game Over</h2>
+            <h3>${endMessage}</h3>
+            <p class="end-emoji">${endMoji}</p>
+        </div>`
 }
 
 function render() {
