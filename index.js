@@ -19,6 +19,11 @@ function attack() {
 }
 
 function endGame() {
+    const endMoji = 
+        wizard.dead && orc.dead ? "☠️☠️☠️"
+        : wizard.dead ? "☠️"
+        : "🔮"
+
     const endMessage =
         wizard.dead && orc.dead ? "No victors - all creatures are dead."
         : wizard.dead ? "The orc is victorious."
