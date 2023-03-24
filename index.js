@@ -3,13 +3,15 @@ import Character from "./Character.js"
 
 const wizard = new Character(characterData.hero)
 const orc = new Character(characterData.monster)
-
 let monstersArray = ["orc", "demon", "goblin"]
+let monster = getNewMonster()
+
 
 document.getElementById("attack-button").addEventListener("click", attack)
 
 function getNewMonster() {
     const nextMonsterData = characterData[monstersArray.shift()]
+    return nextMonsterData ? new Character(nextMonsterData) : {}
 }
 
 function attack() {
