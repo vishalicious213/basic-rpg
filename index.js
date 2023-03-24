@@ -39,6 +39,8 @@ function attack() {
 }
 
 function endGame() {
+    isWaiting = true
+    
     const endMoji = 
         wizard.dead && monster.dead ? "☠️☠️☠️"
         : wizard.dead ? "☠️"
