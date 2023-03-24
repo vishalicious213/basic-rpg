@@ -4,6 +4,7 @@ import Character from "./Character.js"
 const wizard = new Character(characterData.hero)
 let monstersArray = ["orc", "demon", "goblin"]
 let monster = getNewMonster()
+let isWaiting = false
 
 document.getElementById("attack-button").addEventListener("click", attack)
 
@@ -13,20 +14,26 @@ function getNewMonster() {
 }
 
 function attack() {
-    wizard.getDiceHtml()
-    monster.getDiceHtml()
-    wizard.takeDamage(monster.currentDiceScore)
-    monster.takeDamage(wizard.currentDiceScore)
-    render()
-
-    if (wizard.dead) {
-        endGame()
-    } else if (monster.dead) {
-        if (monstersArray.length > 0) {
-            monster = getNewMonster()
-            setTimeout(() => render(), 1500)
-        } else {
+    if (!isWaiting) {
+        wizard.getDiceHtml()
+        monster.getDiceHtml()
+        wizard.takeDamage(monster.currentDiceScore)
+        monster.takeDamage(wizard.currentDiceScore)
+        render()
+    
+        if (wizard.dead) {
             endGame()
+        } else if (monster.dead) {
+            isWaiting = true
+            if (monstersArray.length > 0) {
+                setTimeout(() => {
+                    monster = getNewMonster()
+                    render()
+                    isWaiting = false
+                }, 1500)
+            } else {
+                endGame()
+            }
         }
     }
 }
