@@ -25,6 +25,8 @@ function Character(data) {
             this.dead = true
             this.health = 0
         }
+
+        console.log(getPercentage(this.health, this.maxHealth))
     }
 
     this.getCharacterHtml = function() {
