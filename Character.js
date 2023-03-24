@@ -48,6 +48,7 @@ function Character(data) {
                 <h4 class="name"> ${name} </h4>
                 <img class="avatar" src="${avatar}"/>
                 <p class="health">health: <b> ${health} </b></p>
+                ${healthBar}
                 <div class="dice-container"> ${diceArray} </div>
             </div>
         `
