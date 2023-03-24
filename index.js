@@ -42,12 +42,14 @@ function endGame() {
         : wizard.dead ? `The ${monster.name} is victorious.`
         : "The wizard wins!"
 
-    document.body.innerHTML = 
-        `<div class="end-game">
-            <h2>Game Over</h2>
-            <h3>${endMessage}</h3>
-            <p class="end-emoji">${endMoji}</p>
-        </div>`
+        setTimeout(() => {
+            document.body.innerHTML = 
+                `<div class="end-game">
+                    <h2>Game Over</h2>
+                    <h3>${endMessage}</h3>
+                    <p class="end-emoji">${endMoji}</p>
+                </div>`
+        }, 1500)
 }
 
 function render() {
