@@ -2,7 +2,6 @@ import characterData from "./data.js"
 import Character from "./Character.js"
 
 const wizard = new Character(characterData.hero)
-const orc = new Character(characterData.monster)
 let monstersArray = ["orc", "demon", "goblin"]
 let monster = getNewMonster()
 
@@ -16,25 +15,25 @@ function getNewMonster() {
 
 function attack() {
     wizard.getDiceHtml()
-    orc.getDiceHtml()
-    wizard.takeDamage(orc.currentDiceScore)
-    orc.takeDamage(wizard.currentDiceScore)
+    monster.getDiceHtml()
+    wizard.takeDamage(monster.currentDiceScore)
+    monster.takeDamage(wizard.currentDiceScore)
     render()
 
-    if (wizard.dead || orc.dead) {
+    if (wizard.dead || monster.dead) {
         endGame()
     }
 }
 
 function endGame() {
     const endMoji = 
-        wizard.dead && orc.dead ? "☠️☠️☠️"
+        wizard.dead && monster.dead ? "☠️☠️☠️"
         : wizard.dead ? "☠️"
         : "🔮"
 
     const endMessage =
-        wizard.dead && orc.dead ? "No victors - all creatures are dead."
-        : wizard.dead ? "The orc is victorious."
+        wizard.dead && monster.dead ? "No victors - all creatures are dead."
+        : wizard.dead ? `The ${monster.name} is victorious.`
         : "The wizard wins!"
 
     document.body.innerHTML = 
@@ -47,7 +46,7 @@ function endGame() {
 
 function render() {
     document.getElementById("hero").innerHTML = wizard.getCharacterHtml()
-    document.getElementById("monster").innerHTML = orc.getCharacterHtml()
+    document.getElementById("monster").innerHTML = monster.getCharacterHtml()
 }
 
 render()
