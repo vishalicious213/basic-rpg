@@ -3,6 +3,7 @@ import { getDiceRollArray, getDicePlaceholderHtml } from "./utils.js"
 // character constructor function
 function Character(data) {
     Object.assign(this, data)
+    this.maxHealth = this.health
 
     this.diceArray = getDicePlaceholderHtml(this.diceCount)
 
