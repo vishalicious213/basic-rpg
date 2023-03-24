@@ -14,6 +14,11 @@ function Character(data) {
         this.diceArray = this.currentDiceScore.map(num => `<div class="dice">${num}</div>`).join("")
     }
 
+    this.getHealthBarHtml = () => {
+        const percent = getPercentage(this.health, this.maxHealth)
+        console.log(percent)
+    }
+
     this.takeDamage = function(attackScoreArray) {
         const totalAttackScore = attackScoreArray.reduce((total, damage) => total + damage)
 
@@ -29,6 +34,8 @@ function Character(data) {
 
     this.getCharacterHtml = function() {
         const { name, avatar, health, diceArray } = this
+        const healthBar = this.getHealthBarHtml()
+
         return `
             <div class="character-card">
                 <h4 class="name"> ${name} </h4>
