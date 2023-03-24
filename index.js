@@ -15,8 +15,8 @@ function getNewMonster() {
 
 function attack() {
     if (!isWaiting) {
-        wizard.getDiceHtml()
-        monster.getDiceHtml()
+        wizard.setDiceHtml()
+        monster.setDiceHtml()
         wizard.takeDamage(monster.currentDiceScore)
         monster.takeDamage(wizard.currentDiceScore)
         render()
@@ -40,7 +40,7 @@ function attack() {
 
 function endGame() {
     isWaiting = true
-    
+
     const endMoji = 
         wizard.dead && monster.dead ? "☠️☠️☠️"
         : wizard.dead ? "☠️"
