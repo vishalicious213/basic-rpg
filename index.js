@@ -5,7 +5,6 @@ const wizard = new Character(characterData.hero)
 let monstersArray = ["orc", "demon", "goblin"]
 let monster = getNewMonster()
 
-
 document.getElementById("attack-button").addEventListener("click", attack)
 
 function getNewMonster() {
@@ -20,8 +19,15 @@ function attack() {
     monster.takeDamage(wizard.currentDiceScore)
     render()
 
-    if (wizard.dead || monster.dead) {
+    if (wizard.dead) {
         endGame()
+    } else if (monster.dead) {
+        if (monstersArray.length > 0) {
+            monster = getNewMonster()
+            render()
+        } else {
+            endGame()
+        }
     }
 }
 
