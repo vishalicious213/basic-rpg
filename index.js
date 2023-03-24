@@ -4,6 +4,8 @@ import Character from "./Character.js"
 const wizard = new Character(characterData.hero)
 const orc = new Character(characterData.monster)
 
+let monstersArray = ["orc", "demon", "goblin"]
+
 document.getElementById("attack-button").addEventListener("click", attack)
 
 function attack() {
