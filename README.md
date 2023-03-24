@@ -21,3 +21,7 @@ This RPG is the focus of Module 7 from Scrimba's Frontend Developer Path, "Next-
 - Arrow functions
 - setTimeout()
 - Classes
+
+## Customizations
+
+- Added yellow color to health bar when health between 26-75%
