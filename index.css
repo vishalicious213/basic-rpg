@@ -122,6 +122,10 @@ main {
     background:#d1435f;
 }
 
+.health-bar-outer .health-bar-inner.injured {
+    background:#bcd143;
+}
+
 .dice-container {
     width:100%;
     height: 20%;
