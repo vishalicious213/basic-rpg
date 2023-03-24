@@ -8,6 +8,10 @@ let monstersArray = ["orc", "demon", "goblin"]
 
 document.getElementById("attack-button").addEventListener("click", attack)
 
+function getNewMonster() {
+    const nextMonsterData = characterData[monstersArray.shift()]
+}
+
 function attack() {
     wizard.getDiceHtml()
     orc.getDiceHtml()
