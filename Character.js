@@ -17,6 +17,13 @@ function Character(data) {
     this.getHealthBarHtml = () => {
         const percent = getPercentage(this.health, this.maxHealth)
         console.log(percent)
+        return `
+            <div class="health-bar-outer">
+                <div class="health-bar-inner ${percent <= 24 ? 'danger' : ``}" 
+                    style="width: ${percent}%;">
+                </div>
+            </div>
+        `
     }
 
     this.takeDamage = function(attackScoreArray) {
