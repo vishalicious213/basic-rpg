@@ -25,3 +25,5 @@ This RPG is the focus of Module 7 from Scrimba's Frontend Developer Path, "Next-
 ## Customizations
 
 - Added yellow color to health bar when health between 26-75%
+
+Deployed at: https://vish213-basic-rpg.netlify.app/
